@@ -1,0 +1,493 @@
+header {
+  width: 100%;
+}
+.pd{
+  padding: 20px;
+}
+header > div {
+  width: 100%;
+  display: flex;               
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  height: 2px;
+  background-color: black;
+}
+
+.nav-flex-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;                    
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.menu-1 {
+  width: 30px;
+}
+
+.menu-2 {
+  width: 20px;
+}
+
+.menu-3 {
+  width: 10px;
+}
+
+.nav-flex li {
+  list-style: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.fav-cart-acc {
+  display: flex;               
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cart-btn{
+  width: 76px;
+  height: 50px;
+  background-color: black;
+  border-radius: 35px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 2;
+}
+.cart-icon{
+  display: flex;
+}
+.cart-icon img{
+  margin-left: -10px;
+}
+.cart-btn:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.fav-cart-acc button:not(.cart-btn) {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+nav ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+main{
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+main aside{
+  margin-top: 120px;
+  height: 100%;
+  width: 30%;
+}
+main aside ul{
+  list-style: none;
+  font-size: 25px;
+  margin-left: -30px;
+}
+main aside ul li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.search-opt{
+  width: 367px;
+  display: flex;
+  align-items: center;
+  background-color: var(--btn-color);
+  padding: 10px;
+  justify-content: space-between;
+}
+.search-opt img{
+  width: 20px;
+}
+.search-opt input{
+  text-align: right;
+  border:none;
+  outline: none;
+  width: 80%;
+  background-color: transparent;
+  font-size: 18px;
+}
+.summer-collection{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.summer-collection h1{
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1;
+}
+.summer-collection span{
+  font-size: 20px;
+}
+.go_shop_btn{
+  background-color: var(--btn-color);
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.go_shop_btn img{
+  transition: all .3s ease-in-out;
+}
+.go_shop_btn:hover{
+ background-color: var(--btn-hover); 
+ &.go_shop_btn img{
+  transform: translateX(-10px);
+ }
+}
+.go_move{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 100px;
+}
+.move_div{
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.move_btn{
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.main_hero_section{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 90dvh;
+  justify-content: end;
+  width: 70%;
+}
+.hero_scroller{
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  overflow: hidden;
+}
+.hero_scroller div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.search-opt:focus-within {
+  border: 1px solid #1e1e1e;
+}
+.cnt{
+ margin-top: 70px;
+}
+.new_week_header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.new_week_header button{
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 15px;
+}
+.new_week_header h1{
+  font-size: 50px;
+  line-height: 1;
+}
+.new_week_header h1 sup{
+  font-size: 20px;
+  color: var(--sup-h1);
+}
+.tshirt-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 400px;
+}
+.new-week-collection-cart{
+  display: flex;
+  gap:50px ;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tshirt-cart .tshirt-desc{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items:center;
+}
+.tshirt-cart img{
+  width: 100%;
+}
+.tshirt-cart .tshirt-name-desc{
+  line-height: .5;
+}
+.tshirt-cart span{
+  color: gray;
+  font-size: 14px;
+}
+.scroll-nav{
+  position: fixed;
+  top: -20px;
+  right: 0;
+  left: 0;
+  margin-top: 15px;
+  padding: 10px 5px;
+  background-color: white;
+}
+.more-opt-sec{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.more-opt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-opt span{
+  color: var(--more-fnt);
+}
+.more-opt i{
+  transition: all .3s ease-in;
+}
+.more-opt:hover.more-opt {
+  & i{
+    color:rgb(171, 171, 171);
+    transform: translateY(2px);
+  }
+}
+.xvi_cnt{
+  margin-top: 70px;
+}
+.fashion-sec{
+  margin-top: 30px;
+}
+.fashion-app-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fashion-app-header div{
+  text-align: center;
+}
+.fashion-app-header h1{
+  font-size: 50px;
+  letter-spacing: 8px;
+  margin: 0;
+}
+.fashion-app-header p{
+  color: var(--p-color);
+  width: 60%;
+  margin: 10px auto;
+  font-size: 20px;
+  font-family: 'Poppins',sans-serif;
+}
+.model-collection{
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.model-collection .img-cnt{
+  display: flex;
+  height: 600px;
+}
+.model-collection img{
+  height: 500px;
+}
+footer{
+  width: 100%;
+  height: 80vh;
+  background-color: #f5f5f5;
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+footer>div{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer div h1{
+  color: var(--more-fnt);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer div ul{
+  list-style: none;
+  color: #000;
+  text-transform: uppercase;
+  margin: 10px 0;
+  padding: 0;
+}
+footer h1{
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+footer .logo-div{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.logo-div img{
+  width: 70px;
+}
+.logo-div h1{
+  font-size: 100px;
+  font-weight: 600;
+  color: #000;
+}
+.logo-div div{
+  display: flex;
+  gap: 10px;
+}
+.logo-div div span{
+  margin-top: 10px;
+}
+footer .logo-div span{
+  color: var(--more-fnt);
+}
+.align-st{
+  align-items: start;
+}
+.align-en{
+  align-items: end;
+}
+
+@media only screen and (max-width:950px){
+  nav ul{
+    display: none;
+  }
+  .fav-cart-acc button{
+    display: none;
+  }
+  .fav-cart-acc{
+    justify-content: center;
+    gap: 5px;
+  }
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+  main aside{
+    width: 100%;
+  }
+  .go_move{
+    flex-direction: column;
+    align-items: start;
+  }
+  .main_hero_section{
+    justify-content: center;
+    width: 90%;
+    height: 65dvh;
+  }
+  footer{
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .list{
+    display: flex;
+    flex-direction: row;
+  }
+  .logo-div h1{
+    font-size: 50px;
+  }
+  .logo-div span{
+    font-size: 12px;
+  }
+  .fashion-app-header h1{
+    font-size: 30px;
+  }
+  .fashion-app-header p{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:500px){
+  header img{
+    width: 30px;
+  }
+  .search-opt{
+    width: 95%;
+  }
+  main aside{
+    margin-top: 60px;
+  }
+  .summer-collection{
+    margin-top: 50px;
+  }
+  .main_hero_section{
+    justify-content: center;
+    width: 100%;
+    height: 75dvh;
+  }
+  .move_div{
+    display: none;
+  }
+  .go_move{
+    margin-top: 25px;
+  }
+  .new_week_header h1{
+    font-size: 30px;
+  }
+  .cnt{
+    margin-top:-100px ;
+  }
+
+}
