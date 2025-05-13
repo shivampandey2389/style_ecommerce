@@ -1,8 +1,15 @@
 import React from 'react'
+import { Cloth } from '../components/Cloth'
+import XVICollection from '../components/XVICollection'
+import FashionApproach from '../components/FashionApproach'
 
 const Collection = () => {
   return (
-    <div>Collection</div>
+    <>
+    <Cloth/>
+    <XVICollection/>
+    <FashionApproach/>
+    </>
   )
 }
 

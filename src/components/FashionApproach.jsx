@@ -16,7 +16,6 @@ const FashionApproach = () => {
           <img src={item.url} alt={item.name} width="100%" />
         </div>
         )
-          
         )}
       </div>
     </section>

@@ -49,13 +49,36 @@ header > div {
   font-size: 16px;
   letter-spacing: 2px;
 }
-
+.nav-flex li a{
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+.nav-flex li a::after{
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: all .6s ease-in-out;
+  display: flex;
+  border-radius: 10px;
+}
+.nav-flex a:hover::after,
+.nav-flex a.active::after
+{
+  width: 100%;
+  display:block;
+}
 .fav-cart-acc {
   display: flex;               
   width: 20%;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+
 }
 .cart-btn{
   width: 76px;
@@ -337,6 +360,7 @@ main aside ul li:hover{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .model-collection .img-cnt{
   display: flex;
@@ -410,7 +434,175 @@ footer .logo-div span{
 .align-en{
   align-items: end;
 }
-
+.account-sec{
+  width: 100%;
+}
+.account-sec .inner-sec-acc{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  gap: 20px;
+}
+.inner-sec-acc>div:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & img{
+    border-radius: 50%;
+  }
+}
+.acc-info h1{
+  font-size: 30px;
+  text-align: center;
+}
+.acc-info .acc-list-col{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+.acc-list-col .acc-list{
+  width:50%;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  border: 1px solid var(--btn-hover);
+  border-radius: 20px;
+  cursor: pointer;
+  height: 100px;
+}
+.acc-list .acc-name-other-info{
+  display: flex;
+  flex-direction: column;
+  line-height: .5;
+}
+.acc-list p{
+  letter-spacing: 1px;
+  color: gray;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+}
+.acc-list-col .acc-list:hover{
+  background-color:var(--bg-acc);
+}
+.acc-list i{
+  font-size: 40px;
+  justify-self: center;
+}
+.acc-list i.log-out{
+  color: red;
+}
+.login-outter{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: #1e1e1e;
+  font-family: 'Poppins';
+}
+.login-main h1{
+  font-weight: 400;
+}
+.login-outter .login-main{
+  width: 500px;
+  height: 60vh;
+  background-color: var(--bg-acc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.login-main form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.login-main form .form-div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.form-div label{
+  align-self:start;
+  padding-left: 40px;
+  color: var(--more-fnt);
+}
+.login-main form input{
+  width: 80%;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--btn-color);
+  font-size: 16px;
+  padding-left: 20px;
+}
+.login-main form input:focus{
+  outline: 1px solid var(--btn-login);
+}
+.login-main form button{
+  background-color:var(--btn-login);
+  color: #FFFFFF;
+  width: 80%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color:#6C757D;
+  }
+}
+.login-outter .hr-line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+}
+.login-outter .hr-line div{
+  width: 40%;
+  height: 2px;
+  background-color: var(--btn-color);
+}
+.login-outter .google-auth{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.google-auth button{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 17px;
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.google-auth button:hover{
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 
+              0 3px 6px rgba(0, 0, 0, 0.1);
+}
 @media only screen and (max-width:950px){
   nav ul{
     display: none;
@@ -458,10 +650,16 @@ footer .logo-div span{
   .fashion-app-header p{
     font-size: 18px;
   }
+  .model-collection div{
+    align-items: center;
+  }
+  .acc-list-col .acc-list{
+    width: 100%;
+  }
 }
 @media only screen and (max-width:500px){
   header img{
-    width: 30px;
+    width: 40px;
   }
   .search-opt{
     width: 95%;
@@ -489,5 +687,23 @@ footer .logo-div span{
   .cnt{
     margin-top:-100px ;
   }
-
+  .model-collection{
+    margin: 50px 0;
+  }
+  footer .list{
+    gap: 50px;
+  }
+  .acc-list-col .acc-list i{
+    font-size: 25px;
+  }
+  .acc-list-col .acc-list{
+    grid-template-columns: 60px 1fr;
+  }
+  .acc-list-col .acc-list .acc-name-other-info h2{
+    font-size: 20px;
+  }
+  .acc-list-col .acc-list .acc-name-other-info p{
+    font-size: 15px;
+    letter-spacing: 0;
+  }
 }

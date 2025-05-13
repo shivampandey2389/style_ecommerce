@@ -33,6 +33,7 @@ const Footer = () => {
           <h1>XVI <br />QR</h1>
           <span> Near-field communication</span>
           </div>
+          <span>© Copyright | Shivam Pandey</span>
       </div>
 
       <div>

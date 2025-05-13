@@ -78,4 +78,37 @@ export const fashionModel = [
 
 export const footerInfo=["price","about","contacts"]
 
-export const Languages =['Eng','esp','sve']
+export const Languages =['Eng','esp','sve'];
+
+export const accInfo = [
+  {
+    id:1,
+    iconClass:"fa-solid fa-user",
+    name:"Profile",
+    otherInfo:"Name,Mobile no. and other"
+  },
+  {
+    id:2,
+    iconClass:"fa-solid fa-dolly",
+    name:"Orders",
+    otherInfo:"Order history,Order name and other"
+  },
+  {
+    id:3,
+    iconClass:"fa-solid fa-credit-card",
+    name:"Payment method",
+    otherInfo:"Change method,reciepts and other"
+  },
+  {
+    id:4,
+    iconClass:"fa-solid  fa-lock",
+    name:"Security",
+    otherInfo:"Policy,methods and other"
+  },
+  {
+    id:5,
+    iconClass:"fa-solid fa-arrow-right-from-bracket log-out",
+    name:"Log out",
+    otherInfo:""
+  }
+]

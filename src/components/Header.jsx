@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
   const [scroll,setScroll] = useState(false);
@@ -23,9 +23,21 @@ const Header = () => {
             </button>
             <nav>
             <ul className="nav-flex">
-              <li>Home</li>
-              <li>Collections</li>
-              <li>New</li>
+              <li>
+                <NavLink to="/home">
+                  Home
+                </NavLink>  
+              </li>
+              <li>
+                <NavLink to="/collection">
+                  Collections 
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/new">
+                  New
+                </NavLink>
+              </li>
             </ul>
           </nav>
         </div>
@@ -45,9 +57,9 @@ const Header = () => {
             <img src="/images/cart.png" alt="" />
             </div>
           <div>
-            <Link>
+            <NavLink to="/account">
               <img src="/images/account.png" alt="" />
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
