@@ -1,21 +1,22 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const SignIn = () => {
   const navigate = useNavigate();
-  const [login,setLogin] = useState({
+  const [register,setRegister] = useState({
+    name:"",
     email:"",
     password:""
   })
   const handleChange =(e)=>{
-    setLogin((prev)=>({
+    setRegister((prev)=>({
       ...prev,
       [e.target.name]:e.target.value
     }))
   }
   const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log(login);
+    console.log(register)
   }
   return (
     <div className='login-outter'>
@@ -24,21 +25,25 @@ const Login = () => {
         <h1>Welcome to Logo</h1>
 
         <form onSubmit={handleSubmit}>
+          <div className="form-div">
+            <label htmlFor="name">Name:</label>
+            <input type="text" placeholder='Name' name='name' id='name' value={register.name} onChange={handleChange} />
+          </div>
           <div className='form-div'>
           <label htmlFor="email">Email:</label>
-          <input name='email' id="email" type="email" value={login.email} placeholder="Email" onChange={handleChange}/>
+          <input name='email' id="email" type="email" value={register.email} placeholder="Email" onChange={handleChange}/>
           </div>
 
           <div className='form-div'>
           <label htmlFor="password" id='password'>Password:</label>
-          <input name='password' type="password" value={login.password} placeholder='Password' onChange={handleChange} />
+          <input name='password' type="password" value={register.password} placeholder='Password' onChange={handleChange} />
           </div>
 
-          <button>Login</button>
+          <button>Sign in</button>
 
         </form>
 
-        <p>Create new account ? <Link to="/register">Register</Link></p>
+        <p>Already have an account ? <Link to="/login">Login</Link></p>
 
         <div className='hr-line'>
           <div></div>
@@ -56,4 +61,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignIn

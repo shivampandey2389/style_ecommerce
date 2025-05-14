@@ -505,7 +505,7 @@ footer .logo-div span{
   align-items: center;
   justify-content: center;
   height: 100dvh;
-  background-color: #1e1e1e;
+  background-color: var(--log-bg);
   font-family: 'Poppins';
 }
 .login-main h1{
@@ -513,12 +513,11 @@ footer .logo-div span{
 }
 .login-outter .login-main{
   width: 500px;
-  height: 60vh;
   background-color: var(--bg-acc);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 30px 10px;
   border-radius: 10px;
 }
 .login-main form{
@@ -537,18 +536,25 @@ footer .logo-div span{
 .form-div label{
   align-self:start;
   padding-left: 40px;
-  color: var(--more-fnt);
+  color: var(--label-color);
+  font-weight: 500;
 }
 .login-main form input{
   width: 80%;
   height: 40px;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 1px solid var(--btn-color);
   font-size: 16px;
   padding-left: 20px;
 }
 .login-main form input:focus{
   outline: 1px solid var(--btn-login);
+}
+.login-main p a{
+  color: blue;
+  &:hover{
+    color: var(--sup-h1);
+  }
 }
 .login-main form button{
   background-color:var(--btn-login);
@@ -559,7 +565,7 @@ footer .logo-div span{
   outline: none;
   font-size: 18px;
   height: 40px;
-  text-transform: uppercase;
+  text-transform:capitalize;
   text-align: center;
   cursor: pointer;
   &:hover{

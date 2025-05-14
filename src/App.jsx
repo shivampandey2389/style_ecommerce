@@ -7,6 +7,7 @@ import { New } from './pages/New'
 import Layout from './pages/Layout'
 import Account from './pages/Account'
 import Login from './pages/Login'
+import SignIn from './pages/SignIn'
 function App() {
   const isAuthenticated = false;
   const router = createBrowserRouter([
@@ -36,6 +37,10 @@ function App() {
       path: "/login",
       element: <Login />,
     },
+    {
+      path:"/register",
+      element:<SignIn/>
+    }
   ]);
   return (
   <RouterProvider router={router}/>
