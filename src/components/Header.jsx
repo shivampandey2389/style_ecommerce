@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
+import { useAuthContext } from '../context/authContext';
 
 const Header = () => {
+  const {account} = useAuthContext();
   const [scroll,setScroll] = useState(false);
   useEffect(()=>{
     const handleScroll = () =>{
@@ -46,7 +48,7 @@ const Header = () => {
           <img src="/images/logo.png" alt="" />
         </div>
 
-        <div className="fav-cart-acc">
+      <div className="fav-cart-acc">
            <button>
             <img src="/images/fav.png" alt="" />
            </button>
@@ -56,10 +58,17 @@ const Header = () => {
             </button>
             <img src="/images/cart.png" alt="" />
             </div>
-          <div>
-            <NavLink to="/account">
-              <img src="/images/account.png" alt="" />
+          <div className="acc-logo-outter">
+            <div className='acc-logo-head'>
+            <NavLink to="/account" >
+              <img src="/images/account.png" alt=""  />
             </NavLink>
+            </div>
+            <div className='hover-email'>
+              <div>
+                {account.email || "not Logged in"}
+              </div>
+            </div>
           </div>
         </div>
       </div>

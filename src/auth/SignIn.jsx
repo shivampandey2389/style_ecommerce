@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { Link} from 'react-router-dom'
+
 
 const SignIn = () => {
-  const navigate = useNavigate();
+
   const [register,setRegister] = useState({
     name:"",
     email:"",
@@ -16,8 +17,12 @@ const SignIn = () => {
   }
   const handleSubmit = (e) =>{
     e.preventDefault();
+    handleGoogleSignIn();
     console.log(register)
   }
+
+ 
+
   return (
     <div className='login-outter'>
       <section className='login-main'>
@@ -50,12 +55,7 @@ const SignIn = () => {
           <span>Or</span>
           <div></div>
         </div>
-        <div className='google-auth'>
-            <button>
-              <img src="/images/google.png" alt="google" width={20} />
-              <p>Continue with Google</p>
-            </button>
-        </div>
+        
       </section>
     </div>
   )

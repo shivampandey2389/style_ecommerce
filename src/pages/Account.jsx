@@ -1,19 +1,21 @@
-import React from 'react'
+
 import { accInfo } from '../../constant'
+import { useAuthContext } from '../context/authContext'
 
 const Account = () => {
+  const {account} = useAuthContext();
   return (
     <section className='account-sec'>
       <div className="inner-sec-acc">
         <div className='acc-img'>
-          <img src="/images/images.jpg" alt="" height="200px" width="200px" />
+          <img src={account.photoURL} alt="" height="200px" width="200px" />
         </div>
         <div className='acc-info'>
-          <h1>Your Account</h1>
+          <h1>{account.displayName}</h1>
           <div className='acc-list-col'>
             {
               accInfo.map((item)=>(
-              <div className='acc-list'>
+              <div className='acc-list' key={item.id}>
               <i className={item.iconClass}></i>
                 <div className='acc-name-other-info'>
                 <h2>{item.name}</h2>

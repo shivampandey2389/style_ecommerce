@@ -499,6 +499,37 @@ footer .logo-div span{
 .acc-list i.log-out{
   color: red;
 }
+.acc-logo-outter{
+  position: relative;
+}
+.acc-logo-outter:hover .hover-email {
+  display: block;
+  opacity: .8;
+}
+
+.fav-cart-acc .hover-email {
+  display: none;
+  position: absolute;
+  right: 10px;
+  padding: 20px;
+  background-color: var(--tool-tip);
+  color: #FFFFFF;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+.hover-email::after{
+  content: ' ';
+  position: absolute;
+  transform: rotate(180deg);
+  top: -15%;
+  right: 3%;
+  border-width:6px;
+  border-style: solid;
+  border-color:var(--tool-tip) transparent transparent transparent ;
+}
 .login-outter{
   width: 100%;
   display: flex;
@@ -542,7 +573,7 @@ footer .logo-div span{
 .login-main form input{
   width: 80%;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid var(--btn-color);
   font-size: 16px;
   padding-left: 20px;

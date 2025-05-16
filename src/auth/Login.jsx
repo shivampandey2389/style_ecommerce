@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { auth,provider } from '../firebase/firebase'
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { useAuthContext } from '../context/authContext'
 
 const Login = () => {
   const navigate = useNavigate();
+  const {islogin,setAccount} =useAuthContext()
   const [login,setLogin] = useState({
     email:"",
     password:""
@@ -17,6 +21,24 @@ const Login = () => {
     e.preventDefault();
     console.log(login);
   }
+
+  const handleGoogleSignIn = () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential?.accessToken;
+      const user = result.user;
+      islogin();
+      setAccount(user);
+      navigate('/Home')
+      console.log('User:', user);
+      console.log('Token:', token);
+    })
+    .catch((error) => {
+      console.error('Error during Google Sign-In:', error);
+    });
+};
+
   return (
     <div className='login-outter'>
       <section className='login-main'>
@@ -46,7 +68,7 @@ const Login = () => {
           <div></div>
         </div>
         <div className='google-auth'>
-            <button>
+            <button onClick={handleGoogleSignIn}>
               <img src="/images/google.png" alt="google" width={20} />
               <p>Continue with Google</p>
             </button>

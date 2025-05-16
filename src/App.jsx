@@ -6,14 +6,18 @@ import Collection from './pages/Collection'
 import { New } from './pages/New'
 import Layout from './pages/Layout'
 import Account from './pages/Account'
-import Login from './pages/Login'
-import SignIn from './pages/SignIn'
+import Login from './auth/Login'
+import SignIn from './auth/SignIn'
+import PrivateRoute from './components/PrivateRoutes'
 function App() {
-  const isAuthenticated = false;
   const router = createBrowserRouter([
     {
       path: "/",
-      element: isAuthenticated ? <Layout  /> : <Navigate to="/login" />,
+      element: (
+          <PrivateRoute>
+            <Layout/>
+          </PrivateRoute>
+      ),
       children: [
         {
           path: "/home",
