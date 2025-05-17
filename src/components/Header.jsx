@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
 import { useAuthContext } from '../context/authContext';
 
 const Header = () => {
   const {account} = useAuthContext();
   const [scroll,setScroll] = useState(false);
+  const menuRef = useRef();
+  const handleMenuOpt = () =>{
+    menuRef.current.classList.add('aside-bar-show')
+  }
+  const handleCancel = () =>{
+    menuRef.current.classList.remove('aside-bar-show')
+  }
   useEffect(()=>{
     const handleScroll = () =>{
       let isScroll = window.screenY > 10;
@@ -18,7 +25,7 @@ const Header = () => {
     <header>
       <div className={scroll ? 'scroll-nav':''}>
         <div className="nav-flex-menu">
-            <button className="menu-btn">
+            <button className="menu-btn" onClick={handleMenuOpt} >
               <div className="menu menu-1"/>
               <div className="menu menu-2"/>
               <div className="menu menu-3"/>
@@ -73,6 +80,11 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+    <aside className='aside-bar' ref={menuRef}>
+      <h1>Hello Dude</h1>
+      <button onClick={handleCancel}>Cancel</button>
+    </aside>
     </>
   )
 }

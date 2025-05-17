@@ -9,7 +9,7 @@ header > div {
   display: flex;               
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .menu {
@@ -639,6 +639,21 @@ footer .logo-div span{
 .google-auth button:hover{
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 
               0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.aside-bar{
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  background-color: #FFFFFF;
+  transform: translateX(-300px);
+  transition: all .5s ease-in-out;
+  z-index: 100;
+  top: -2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 
+              0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.aside-bar-show{
+  transform: translateX(0px);
 }
 @media only screen and (max-width:950px){
   nav ul{

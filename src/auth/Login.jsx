@@ -17,7 +17,7 @@ const Login = () => {
       if (user) {
         setAccount(user);
         setIsAuthenticated(true);
-        navigate('/Home');
+        navigate('/home');
         console.log("User is still logged in:", user);
       }
     });
