@@ -50,11 +50,7 @@ const SignIn = () => {
 
         <p>Already have an account ? <Link to="/login">Login</Link></p>
 
-        <div className='hr-line'>
-          <div></div>
-          <span>Or</span>
-          <div></div>
-        </div>
+        
         
       </section>
     </div>
