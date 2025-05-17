@@ -743,4 +743,7 @@ footer .logo-div span{
     font-size: 15px;
     letter-spacing: 0;
   }
+  .google-auth button{
+    width: 90%;
+  }
 }
