@@ -6,4 +6,9 @@ const PrivateRoute = ({ children }) => {
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
+export const RefreshRoute = ({children}) =>{
+  const {isAuthenticated} = useAuthContext();
+  return isAuthenticated && children;
+}
+
 export default PrivateRoute;

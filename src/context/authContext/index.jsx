@@ -8,9 +8,13 @@ export const AuthProvider = ({ children }) => {
   const [account,setAccount] = useState(null);
   const islogin = () => setIsAuthenticated(true);
   const logout = () => setIsAuthenticated(false);
-
+  const afterLogin = (user) =>{
+    islogin();
+    setAccount(user);
+    navigate('/Home');
+}
   return (
-    <AuthContext.Provider value={{ isAuthenticated,account,setAccount, islogin, logout }}>
+    <AuthContext.Provider value={{ afterLogin,setIsAuthenticated ,isAuthenticated,account,setAccount, islogin, logout }}>
       {children}
     </AuthContext.Provider>
   );
